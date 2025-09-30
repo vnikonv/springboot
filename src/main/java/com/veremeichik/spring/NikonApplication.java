@@ -1,4 +1,4 @@
-package com.veremeichik.demo;
+package com.veremeichik.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
