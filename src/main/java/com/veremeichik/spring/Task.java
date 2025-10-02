@@ -1,5 +1,6 @@
 package com.veremeichik.spring;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,8 +13,11 @@ public class Task {
     private String description;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "user_id")
     private User user;
+
+    protected Task () {}
 
     public Task(Long id, String Tasks, String description, User user) {
         this.id = id;

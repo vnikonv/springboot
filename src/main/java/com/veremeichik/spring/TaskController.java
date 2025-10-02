@@ -1,10 +1,28 @@
 package com.veremeichik.spring;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
 @CrossOrigin
 public class TaskController {
+    @Autowired
+    private TaskService taskService;
+
+    @GetMapping("/alltasks")
+    public List<Task> getAllTasks() {
+        return taskService.getAllTasks();
+    }
+
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/allusers")
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
+    }
+
     @GetMapping("/")
     public String index() {
         return "Hello World! :3";
