@@ -42,6 +42,7 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonManagedReference
+    @Getter
     private List<Task> tasks = new ArrayList<>();
 
     protected User () {}
@@ -53,12 +54,5 @@ public class User {
         this.avatar = avatar;
         this.completed = completed;
         this.tasks = tasks;
-    }
-
-    public String getTasks() {
-        for (Task task : tasks) {
-            return task.getTask();
-        }
-        return null;
     }
 }

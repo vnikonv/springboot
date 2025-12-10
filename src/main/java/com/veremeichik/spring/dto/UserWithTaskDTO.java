@@ -7,6 +7,7 @@ import java.util.List;
 public class UserWithTaskDTO {
     private Long id;
     private String name;
+    private String password;
     private String avatar;
     private Boolean status;
     private List<TaskDTO> task_list;

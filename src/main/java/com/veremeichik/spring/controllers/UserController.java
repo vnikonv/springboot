@@ -1,9 +1,7 @@
 package com.veremeichik.spring.controllers;
 
-import com.veremeichik.spring.*;
 import com.veremeichik.spring.dto.UserWithTaskDTO;
-import com.veremeichik.spring.entities.Task;
-import com.veremeichik.spring.entities.User;
+import com.veremeichik.spring.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,5 +1,6 @@
-package com.veremeichik.spring;
+package com.veremeichik.spring.services;
 
+import com.veremeichik.spring.repositories.UserRepository;
 import com.veremeichik.spring.dto.UserWithTaskDTO;
 import com.veremeichik.spring.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;

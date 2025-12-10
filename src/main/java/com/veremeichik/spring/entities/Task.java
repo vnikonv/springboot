@@ -19,16 +19,24 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Getter
     private String Tasks;
 
     @Getter
     @Setter
     private String description;
 
-    @Setter
+    @Getter
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    @Getter
+    private String username;
+
+    public String getUsername() {
+        return user != null ? user.getName() : null;
+    }
 
     protected Task () {}
     public Task(Long id, String Tasks, String description, User user) {
@@ -36,10 +44,6 @@ public class Task {
         this.Tasks = Tasks;
         this.description = description;
         this.user = user;
+        this.username = getUsername();
     }
-
-    public String getTask() {
-        return this.Tasks;
-    }
-
 }

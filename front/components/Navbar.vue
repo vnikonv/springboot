@@ -6,8 +6,8 @@
       <nav class="md:flex text-cyan-700 font-semibold space-x-6">
         <NuxtLink to = "/" class="hover:text-cyan-900 transition">Юзеры</NuxtLink>
         <NuxtLink to = "/tasks" class="hover:text-cyan-900 transition">Таски</NuxtLink>
-        <NuxtLink to = "" class="hover:text-cyan-900 transition">Туда</NuxtLink>
-        <NuxtLink to = "" class="hover:text-cyan-900 transition">Сюда</NuxtLink>
+        <NuxtLink to = "/login" class="hover:text-cyan-900 transition">Логин</NuxtLink>
+        <NuxtLink to = "/logout" class="hover:text-cyan-900 transition">Логаут</NuxtLink>
       </nav>
 
       </div>

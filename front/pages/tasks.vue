@@ -1,13 +1,13 @@
 <template>
-        <div class="flex flex-col items-center justify-center py-20 space-y-3">
+        <div class="flex flex-col items-center justify-center py-10 space-y-3">
             <h1>
-                Hello, My Dear
+                This tab shows tasks of all users
             </h1>
             <img :src="`/images/${msg}.jpg`" />
         </div>
 
-        <div class="flex flex-row items-center justify-center">
-            <table class="">
+        <div class="flex flex-row items-center justify-center pb-20">
+            <table>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -17,11 +17,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="task in task_table" :key="task.id">
+                    <tr v-for="task in tasks" :key="task.id">
                         <td>{{ task.id }}</td>
-                        <td>{{ task.task }}</td>
+                        <td>{{ task.tasks }}</td>
                         <td>{{ task.description }}</td>
-                        <td>{{ task.user }}</td>
+                        <td>{{ task.username }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -41,8 +41,8 @@ onMounted(async () => {
     msg.value = res.data
 })
 
-const dtbs = await axios.get("http://localhost:8080/api/alltasks")
-const task_table = dtbs.data
-console.log("The tasks: " + JSON.stringify(task_table))
+const dtbs = await axios.get("http://localhost:8080/api/task_dto")
+const tasks = dtbs.data
+console.log("The tasks: " + JSON.stringify(tasks))
 
 </script>

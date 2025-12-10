@@ -1,4 +1,4 @@
-package com.veremeichik.spring;
+package com.veremeichik.spring.repositories;
 
 import com.veremeichik.spring.entities.Task;
 import org.springframework.data.jpa.repository.JpaRepository;

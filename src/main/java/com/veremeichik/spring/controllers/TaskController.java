@@ -1,9 +1,11 @@
 package com.veremeichik.spring.controllers;
 import java.util.List;
 
-import com.veremeichik.spring.*;
+import com.veremeichik.spring.dto.TaskDTO;
 import com.veremeichik.spring.entities.Task;
 import com.veremeichik.spring.entities.User;
+import com.veremeichik.spring.services.TaskService;
+import com.veremeichik.spring.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +24,9 @@ public class TaskController {
     public List<Task> getAllTasks() {
         return taskService.getAllTasks();
     }
+
+    @GetMapping("/task_dto")
+    public List<TaskDTO> getAllTasksDTO() { return taskService.getTaskDTO(); }
 
     @Autowired
     private UserService userService;
